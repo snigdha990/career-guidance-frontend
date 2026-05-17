@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import SparkleWrapper from "./components/SparkleWrapper";
 import VantaFog from './components/VantaFog';
 import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
@@ -62,7 +61,6 @@ export default function Home() {
       <Header />
       <div className="mainpage">
         <section id="mainpage-content" className="mainpage-content">
-          <SparkleWrapper />
           <h1 className="gradient-heading">
             <span className="gradient-main">One-Stop Personalized</span>{" "}
             <span className="gradient-sub">Career & Education Advisor</span>
