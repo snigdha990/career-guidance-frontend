@@ -1,0 +1,667 @@
+.careerPage {
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      135deg,
+      #f8fbff 0%,
+      #eef4ff 45%,
+      #f7f0ff 100%
+    );
+
+  font-family: "Inter", sans-serif;
+
+  position: relative;
+  overflow-x: hidden;
+}
+
+.careerPage::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  background: rgba(59,130,246,0.15);
+
+  top: -140px;
+  left: -120px;
+
+  filter: blur(90px);
+}
+
+.careerPage::after {
+  content: "";
+
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  border-radius: 50%;
+
+  background: rgba(168,85,247,0.14);
+
+  right: -120px;
+  bottom: -120px;
+
+  filter: blur(90px);
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 3rem 1.5rem 5rem;
+}
+
+/* HERO */
+
+.heroSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 2rem;
+
+  padding: 3rem;
+
+  border-radius: 36px;
+
+  background:
+    rgba(255,255,255,0.72);
+
+  backdrop-filter: blur(24px);
+
+  border:
+    1px solid rgba(255,255,255,0.7);
+
+  box-shadow:
+    0 25px 60px rgba(37,99,235,0.12);
+
+  margin-bottom: 3rem;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.heroSection::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(59,130,246,0.05),
+      rgba(168,85,247,0.05)
+    );
+
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  gap: 1.8rem;
+}
+
+.heroIcon {
+  width: 110px;
+  height: 110px;
+
+  min-width: 110px;
+
+  border-radius: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 3rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #7c3aed,
+      #ec4899
+    );
+
+  color: white;
+
+  box-shadow:
+    0 18px 35px rgba(99,102,241,0.22);
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  font-weight: 800;
+
+  margin-bottom: 1rem;
+
+  color: #111827;
+
+  letter-spacing: -1px;
+}
+
+.heroContent p {
+  max-width: 700px;
+
+  color: #4b5563;
+
+  line-height: 1.8;
+
+  font-size: 1.05rem;
+}
+
+.matchCard {
+  position: relative;
+  z-index: 2;
+
+  min-width: 240px;
+
+  padding: 2rem;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #7c3aed,
+      #ec4899
+    );
+
+  color: white;
+
+  text-align: center;
+
+  box-shadow:
+    0 24px 50px rgba(99,102,241,0.28);
+}
+
+.matchCard span {
+  font-size: 1rem;
+  font-weight: 600;
+
+  opacity: 0.95;
+}
+
+.matchCard h2 {
+  font-size: 3.2rem;
+  font-weight: 800;
+
+  margin: 0.7rem 0;
+}
+
+.matchCard p {
+  font-size: 0.95rem;
+
+  opacity: 0.92;
+}
+
+/* STATS */
+
+.statsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 1.5rem;
+
+  margin-bottom: 3.5rem;
+}
+
+.statCard {
+  padding: 2rem;
+
+  border-radius: 28px;
+
+  background:
+    rgba(255,255,255,0.75);
+
+  backdrop-filter: blur(18px);
+
+  border:
+    1px solid rgba(255,255,255,0.7);
+
+  box-shadow:
+    0 16px 35px rgba(59,130,246,0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 22px 45px rgba(59,130,246,0.14);
+}
+
+.statCard h3 {
+  font-size: 1rem;
+  font-weight: 700;
+
+  color: #374151;
+
+  margin-bottom: 1rem;
+}
+
+.statCard p {
+  font-size: 1.8rem;
+  font-weight: 800;
+
+  color: #2563eb;
+}
+
+/* SECTION */
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.sectionHeader {
+  margin-bottom: 2rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2rem;
+  font-weight: 800;
+
+  color: #111827;
+
+  margin-bottom: 0.5rem;
+}
+
+.sectionHeader p {
+  color: #6b7280;
+
+  font-size: 1rem;
+}
+
+/* SKILLS */
+
+.skillsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1.5rem;
+}
+
+.skillCard {
+  padding: 1.5rem;
+
+  border-radius: 24px;
+
+  background:
+    rgba(255,255,255,0.75);
+
+  backdrop-filter: blur(16px);
+
+  border:
+    1px solid rgba(255,255,255,0.7);
+
+  box-shadow:
+    0 14px 30px rgba(59,130,246,0.08);
+}
+
+.skillTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1rem;
+
+  font-weight: 700;
+
+  color: #1f2937;
+}
+
+.skillBar {
+  height: 14px;
+
+  border-radius: 999px;
+
+  background: #e5e7eb;
+
+  overflow: hidden;
+}
+
+.skillFill {
+  height: 100%;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #2563eb,
+      #7c3aed,
+      #ec4899
+    );
+
+  box-shadow:
+    0 8px 18px rgba(99,102,241,0.24);
+}
+
+/* ROADMAP */
+
+.roadmapGrid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1.5rem;
+}
+
+.roadmapCard {
+  display: flex;
+  align-items: center;
+
+  gap: 1.3rem;
+
+  padding: 1.6rem;
+
+  border-radius: 24px;
+
+  background:
+    rgba(255,255,255,0.75);
+
+  backdrop-filter: blur(16px);
+
+  border:
+    1px solid rgba(255,255,255,0.7);
+
+  box-shadow:
+    0 14px 30px rgba(59,130,246,0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.roadmapCard:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 20px 40px rgba(59,130,246,0.14);
+}
+
+.stepNumber {
+  width: 56px;
+  height: 56px;
+
+  min-width: 56px;
+
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #7c3aed
+    );
+
+  color: white;
+
+  font-size: 1.1rem;
+  font-weight: 800;
+
+  box-shadow:
+    0 12px 24px rgba(99,102,241,0.22);
+}
+
+.roadmapCard p {
+  color: #374151;
+
+  font-weight: 600;
+
+  line-height: 1.6;
+}
+
+/* COURSES */
+
+.courseGrid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1.5rem;
+}
+
+.courseCard {
+  padding: 2rem;
+
+  border-radius: 28px;
+
+  background:
+    rgba(255,255,255,0.75);
+
+  backdrop-filter: blur(18px);
+
+  border:
+    1px solid rgba(255,255,255,0.7);
+
+  box-shadow:
+    0 16px 35px rgba(59,130,246,0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.courseCard:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 24px 45px rgba(59,130,246,0.14);
+}
+
+.courseTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1.2rem;
+}
+
+.courseTop span {
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  color: #2563eb;
+}
+
+.courseTop small {
+  padding: 0.45rem 0.8rem;
+
+  border-radius: 999px;
+
+  background:
+    rgba(37,99,235,0.08);
+
+  color: #2563eb;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.courseCard h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+
+  color: #111827;
+
+  margin-bottom: 0.8rem;
+
+  line-height: 1.5;
+}
+
+.courseCard p {
+  color: #6b7280;
+
+  margin-bottom: 1.5rem;
+
+  font-weight: 500;
+}
+
+.courseCard button {
+  width: 100%;
+
+  padding: 0.95rem;
+
+  border: none;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #2563eb,
+      #7c3aed
+    );
+
+  color: white;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.courseCard button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 16px 30px rgba(99,102,241,0.24);
+}
+
+/* TECH */
+
+.techContainer {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+}
+
+.techBadge {
+  padding: 0.9rem 1.5rem;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(59,130,246,0.12),
+      rgba(168,85,247,0.12)
+    );
+
+  color: #2563eb;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.techBadge:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 24px rgba(99,102,241,0.14);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .courseGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .heroSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skillsGrid,
+  .roadmapGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .courseGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .heroSection {
+    padding: 2rem;
+  }
+
+  .heroContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .heroContent h1 {
+    font-size: 2.2rem;
+  }
+
+  .heroIcon {
+    width: 90px;
+    height: 90px;
+
+    min-width: 90px;
+
+    font-size: 2.5rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .matchCard {
+    width: 100%;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.6rem;
+  }
+}

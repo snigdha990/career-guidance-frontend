@@ -1,0 +1,202 @@
+.signupcontainer{
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:40px 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef2ff 0%,
+      #eff6ff 40%,
+      #f5f3ff 100%
+    );
+}
+
+.signupcard{
+  width:100%;
+  max-width:470px;
+
+  padding:42px 36px;
+
+  border-radius:32px;
+
+  background:
+    rgba(255,255,255,0.92);
+
+  backdrop-filter:blur(20px);
+
+  border:
+    1px solid rgba(255,255,255,0.7);
+
+  box-shadow:
+    0 20px 60px rgba(37,99,235,0.12);
+
+  animation:fadeUp 0.5s ease;
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.signupcard h1{
+  font-size:2rem;
+  font-weight:800;
+
+  line-height:1.3;
+
+  text-align:center;
+
+  margin-bottom:32px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #2563eb,
+      #7c3aed,
+      #ec4899
+    );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.signupcard form{
+  display:flex;
+  flex-direction:column;
+
+  gap:18px;
+}
+
+.signupcard input{
+  width:100%;
+
+  padding:16px 18px;
+
+  border-radius:18px;
+
+  border:
+    1.5px solid #dbeafe;
+
+  background:
+    rgba(255,255,255,0.85);
+
+  font-size:1rem;
+  font-weight:500;
+
+  color:#111827;
+
+  outline:none;
+
+  transition:
+    all 0.3s ease;
+}
+
+.signupcard input::placeholder{
+  color:#94a3b8;
+}
+
+.signupcard input:focus{
+  border-color:#6366f1;
+
+  background:#fff;
+
+  box-shadow:
+    0 0 0 5px rgba(99,102,241,0.12);
+}
+
+.signupcard button{
+  margin-top:10px;
+
+  padding:16px;
+
+  border:none;
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #2563eb,
+      #7c3aed
+    );
+
+  color:white;
+
+  font-size:1rem;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
+
+  box-shadow:
+    0 14px 30px rgba(99,102,241,0.25);
+}
+
+.signupcard button:hover{
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 18px 38px rgba(99,102,241,0.32);
+}
+
+.signupcard button:disabled{
+  opacity:0.7;
+  cursor:not-allowed;
+}
+
+.errorbox{
+  margin-bottom:18px;
+
+  padding:14px 16px;
+
+  border-radius:16px;
+
+  background:
+    rgba(239,68,68,0.08);
+
+  border:
+    1px solid rgba(239,68,68,0.15);
+
+  color:#dc2626;
+
+  font-size:0.95rem;
+  font-weight:600;
+
+  text-align:center;
+}
+
+@media(max-width:640px){
+
+  .signupcard{
+    padding:34px 24px;
+    border-radius:26px;
+  }
+
+  .signupcard h1{
+    font-size:1.7rem;
+  }
+
+  .signupcard input{
+    padding:15px 16px;
+  }
+
+  .signupcard button{
+    padding:15px;
+  }
+}
