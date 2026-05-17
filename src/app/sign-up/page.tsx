@@ -76,11 +76,13 @@ export default function SignUp() {
 
       router.push("/");
 
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
 
-    } finally {
-      setLoading(false);
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Something went wrong");
+      }
     }
   };
 
