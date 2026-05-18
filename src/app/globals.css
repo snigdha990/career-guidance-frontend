@@ -18,13 +18,21 @@
     0 20px 45px rgba(59,130,246,0.14);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 
   font-family: Arial, Helvetica, sans-serif;
 
@@ -34,7 +42,10 @@ body {
     #f6f8fc;
 
   color: var(--text);
+}
 
+main {
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -67,19 +78,22 @@ body {
 
 .mainpage {
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+
   padding: 26px 20px 90px;
 }
-
-/* HERO SECTION */
 
 .mainpage-content {
   position: relative;
 
+  width: 100%;
   max-width: 1380px;
-  margin: auto auto 90px;
+
+  margin: 20px auto 90px;
 
   padding: 130px 70px;
-  margin-top: 20px;
+
   border-radius: 42px;
 
   text-align: center;
@@ -155,6 +169,8 @@ body {
   margin-bottom: 34px;
 
   color: #111827;
+
+  word-break: break-word;
 }
 
 .gradient-main {
@@ -221,16 +237,16 @@ body {
   color: #6b7280;
 }
 
-/* COMMON SECTION WRAPPER */
-
 .section-container,
 .features-section,
 .how-it-works-section {
+  width: 100%;
   max-width: 1380px;
-  margin: auto auto 90px;
-}
 
-/* ABOUT SECTION */
+  margin: auto auto 90px;
+
+  overflow-x: hidden;
+}
 
 .section-container {
   display: flex;
@@ -284,14 +300,15 @@ body {
 .responsive-image {
   width: 100%;
   max-width: 620px;
+  height: auto;
+
+  display: block;
 
   border-radius: 30px;
 
   box-shadow:
     0 16px 45px rgba(15,23,42,0.12);
 }
-
-/* SECTION TITLES */
 
 .features-title,
 .how-it-works-title {
@@ -305,8 +322,6 @@ body {
   margin-bottom: 65px;
 }
 
-/* GRIDS */
-
 .features-grid,
 .how-it-works-steps {
   display: grid;
@@ -315,8 +330,6 @@ body {
 
   gap: 30px;
 }
-
-/* CARDS */
 
 .feature-card,
 .how-it-works-card {
@@ -422,9 +435,8 @@ body {
   font-size: 1rem;
 }
 
-/* CTA */
-
 .cta-section {
+  width: 100%;
   max-width: 920px;
 
   margin: auto;
@@ -534,8 +546,6 @@ body {
     0 18px 38px rgba(79,70,229,0.22);
 }
 
-/* RESPONSIVE */
-
 @media (max-width: 1100px) {
   .gradient-heading {
     font-size: 3.7rem;
@@ -553,34 +563,49 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .mainpage {
-    padding: 18px 14px 60px;
+    padding: 12px;
   }
 
   .mainpage-content {
-    padding: 75px 24px;
+    padding: 60px 18px;
 
     border-radius: 28px;
+
+    margin-bottom: 50px;
   }
 
   .gradient-heading {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 
     line-height: 1.2;
+
+    letter-spacing: -1px;
   }
 
   .underline-highlight {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .mainpage-content h2 {
-    font-size: 1.02rem;
+    font-size: 1rem;
+
+    line-height: 1.7;
+  }
+
+  .mainpage-content p {
+    font-size: 0.95rem;
   }
 
   .section-container {
-    padding: 42px 24px;
+    flex-direction: column;
 
-    gap: 42px;
+    text-align: center;
+
+    padding: 28px 18px;
+
+    gap: 28px;
 
     border-radius: 28px;
   }
@@ -592,18 +617,37 @@ body {
   .features-title,
   .how-it-works-title,
   .cta-heading {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .features-grid,
+  .how-it-works-steps {
+    grid-template-columns: 1fr;
   }
 
   .feature-card,
   .how-it-works-card {
+    width: 100%;
+
+    min-width: 0;
+
     min-height: auto;
 
     padding: 30px 24px;
   }
 
+  .feature-title,
+  .how-it-works-step-title {
+    font-size: 1.2rem;
+  }
+
+  .feature-description,
+  .how-it-works-text {
+    font-size: 0.95rem;
+  }
+
   .cta-container {
-    padding: 56px 24px;
+    padding: 56px 20px;
 
     border-radius: 28px;
   }
@@ -614,5 +658,16 @@ body {
 
   .cta-button {
     width: 100%;
+  }
+
+  .mainpage-content::before,
+  .mainpage-content::after,
+  .feature-card::before,
+  .how-it-works-card::before,
+  .cta-container::before {
+    width: 140px;
+    height: 140px;
+
+    filter: blur(40px);
   }
 }
